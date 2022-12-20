@@ -38,7 +38,8 @@ body,
 h1,
 h2,
 h3,
-p {
+p,
+label {
   margin: 0;
   letter-spacing: 0;
 }
@@ -59,7 +60,8 @@ h2 {
 h3 {
   font-size: 1.6rem;
 }
-h4 {
+h4,
+label {
   font-size: 1.2rem;
 }
 h5 {
@@ -69,6 +71,7 @@ h5 {
 h1,
 h2,
 h3,
-h4 {
+h4,
+label {
   font-weight: 600;
 }
