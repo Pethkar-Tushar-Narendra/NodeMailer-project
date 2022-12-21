@@ -1,0 +1,13 @@
+.userDisplay-conatiner {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 0;
+  gap: 1rem;
+}
+.userDisplay-conatiner .table {
+  width: 90%;
+}
