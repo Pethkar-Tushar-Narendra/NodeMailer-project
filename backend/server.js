@@ -7,7 +7,9 @@ import path from 'path';
 dotenv.config();
 
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(
+    'mongodb+srv://assignment:assignment@cluster0.tsyq5qh.mongodb.net/UserForm?retryWrites=true&w=majority'
+  )
   .then(() => {
     console.log('connected to db');
   })

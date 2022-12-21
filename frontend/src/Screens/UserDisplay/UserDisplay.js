@@ -55,15 +55,19 @@ const UserDisplay = () => {
               </tr>
             </thead>
             <tbody>
-              {dataArray.map((item, i) => (
-                <tr key={i}>
-                  <th>{i}</th>
-                  <th>{item.name}</th>
-                  <th>{item.email}</th>
-                  <th>{item.mobileNo}</th>
-                  <th>{item.dob.substring(0, 10)}</th>
-                </tr>
-              ))}
+              {dataArray ? (
+                dataArray.map((item, i) => (
+                  <tr key={item._id}>
+                    <th>{i + 1}</th>
+                    <th>{item.name}</th>
+                    <th>{item.email}</th>
+                    <th>{item.mobileNo}</th>
+                    <th>{item.dob.substring(0, 10)}</th>
+                  </tr>
+                ))
+              ) : (
+                <tr>No Data In Database</tr>
+              )}
             </tbody>
           </table>
         </>
