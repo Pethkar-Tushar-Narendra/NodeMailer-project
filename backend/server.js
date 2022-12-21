@@ -2,6 +2,7 @@ import express, { response } from 'express';
 import dotenv from 'dotenv';
 import userRouter from './Routes/userRoute.js';
 import mongoose from 'mongoose';
+import path from 'path';
 
 dotenv.config();
 
@@ -19,6 +20,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/user', userRouter);
+
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, '/frontend/build')));
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
+);
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
