@@ -52,7 +52,7 @@ userRouter.post(
             name: req.body.name,
             email: req.body.email,
             mobileNo: req.body.mobileNo,
-            dob: new Date(),
+            dob: req.body.dob,
           });
           const user = await newUser.save();
         }

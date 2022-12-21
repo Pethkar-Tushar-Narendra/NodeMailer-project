@@ -103,13 +103,19 @@ const UserFormScreen = () => {
               type="date"
               placeholder="Date Of Birth"
               onChange={(e) => {
-                var datestr = e.target.value;
+                setdob(
+                  new Date(
+                    e.target.value.substring(0, 4),
+                    e.target.value.substring(5, 7) - 1,
+                    e.target.value.substring(8, 10)
+                  )
+                );
                 var diff_ms =
                   Date.now() -
                   new Date(
-                    datestr.substring(0, 4),
-                    datestr.substring(5, 7) - 1,
-                    datestr.substring(8, 10)
+                    e.target.value.substring(0, 4),
+                    e.target.value.substring(5, 7) - 1,
+                    e.target.value.substring(8, 10)
                   ).getTime();
                 var age_dt = new Date(diff_ms);
                 if (Math.abs(age_dt.getUTCFullYear() - 1970) < 18) {
@@ -117,13 +123,6 @@ const UserFormScreen = () => {
                 } else {
                   setDobError(false);
                 }
-                setdob(
-                  new Date(
-                    datestr.substring(0, 4),
-                    datestr.substring(5, 7) - 1,
-                    datestr.substring(8, 10)
-                  )
-                );
               }}
               required
             ></input>

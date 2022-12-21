@@ -10,4 +10,5 @@
 }
 .userDisplay-conatiner .table {
   width: 90%;
+  gap: 1rem;
 }
