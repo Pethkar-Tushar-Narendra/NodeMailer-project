@@ -5,16 +5,20 @@ const Row = ({ array }) => {
     <>
       {array.map((item, i) => (
         <div className="row" key={i}>
-          <div className="col1">{i}</div>
-          <div className="col2">{item.name ? item.name : 'Not Available'}</div>
+          <div className="col1">
+            <h5>{i}</h5>
+          </div>
+          <div className="col2">
+            <h5>{item.name ? item.name : 'Not Available'}</h5>
+          </div>
           <div className="col3">
-            {item.email ? item.email : 'Not Available'}
+            <h5>{item.email ? item.email : 'Not Available'}</h5>
           </div>
           <div className="col4">
-            {item.mobileNo ? item.mobileNo : 'Not Available'}
+            <h5>{item.mobileNo ? item.mobileNo : 'Not Available'}</h5>
           </div>
           <div className="col5">
-            {item.dob ? item.dob.substr(0, 10) : 'Not Available'}
+            <h5>{item.dob ? item.dob.substr(0, 10) : 'Not Available'}</h5>
           </div>
         </div>
       ))}

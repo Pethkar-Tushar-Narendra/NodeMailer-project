@@ -8,11 +8,6 @@
   padding: 2rem 0;
   gap: 1rem;
 }
-/* .userDisplay-conatiner .table {
-  width: 90%;
-  gap: 1rem;
-} */
-
 .userDisplay-conatiner .table {
   border-radius: 1rem;
   width: 90%;
@@ -21,4 +16,5 @@
   overflow-y: hidden;
   border: 0.1rem solid var(--clr-para);
   padding: 1rem 0;
+  background-color: var(--clr-primary);
 }
