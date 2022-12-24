@@ -13,7 +13,9 @@ const Row = ({ array }) => {
           <div className="col4">
             {item.mobileNo ? item.mobileNo : 'Not Available'}
           </div>
-          <div className="col5">{item.dob ? item.dob : 'Not Available'}</div>
+          <div className="col5">
+            {item.dob ? item.dob.substr(0, 10) : 'Not Available'}
+          </div>
         </div>
       ))}
     </>
