@@ -39,7 +39,7 @@ form .box label {
   align-items: center;
   justify-content: flex-start;
   height: 3rem;
-  width: 50%;
+  width: 100%;
 }
 form .box input {
   border: 0.1rem solid var(--clr-para);
@@ -68,4 +68,11 @@ form .box .btn {
 }
 form .box:last-child {
   justify-content: flex-end;
+}
+
+@media (min-width: 76em) {
+  form .box input,
+  form .box label {
+    width: 50%;
+  }
 }

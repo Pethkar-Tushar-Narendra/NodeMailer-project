@@ -1,5 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useReducer } from 'react';
+import Header from './Table/Header/Header';
+import Row from './Table/Row/Row';
 import './UserDisplay.css';
 
 const reducer = (state, action) => {
@@ -44,8 +46,8 @@ const UserDisplay = () => {
         <h3>{error}</h3>
       ) : (
         <>
-          <table className="table">
-            <thead>
+          <div className="table">
+            {/* <thead>
               <tr>
                 <th>Id</th>
                 <th>Name</th>
@@ -68,8 +70,10 @@ const UserDisplay = () => {
               ) : (
                 <tr>No Data In Database</tr>
               )}
-            </tbody>
-          </table>
+            </tbody> */}
+            <Header />
+            <Row array={dataArray} />
+          </div>
         </>
       )}
     </div>

@@ -136,7 +136,7 @@ const UserFormScreen = () => {
           <div className="box">
             {loading ? (
               <button className="btn" type="submit" disabled>
-                <h4>Submit...</h4>
+                <h4>Please Wait...</h4>
               </button>
             ) : (
               <button className="btn" type="submit">

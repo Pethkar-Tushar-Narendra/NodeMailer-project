@@ -8,7 +8,17 @@
   padding: 2rem 0;
   gap: 1rem;
 }
-.userDisplay-conatiner .table {
+/* .userDisplay-conatiner .table {
   width: 90%;
   gap: 1rem;
+} */
+
+.userDisplay-conatiner .table {
+  border-radius: 1rem;
+  width: 90%;
+  margin-top: 2rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  border: 0.1rem solid var(--clr-para);
+  padding: 1rem 0;
 }
